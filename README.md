@@ -336,7 +336,7 @@ URL: {{DOMAIN}}/api/v1/cliente/640657f80d27cabc88f63440/credito/640659ed0d27cabc
 #### Eliminar un crédito
 
 
-Dado el ID del cliente y el ID del crédito, se elimina el crédito. S0lamente se pueden eliminar créditos pre aprobados o en su defecto, con estatus "en proceso".
+Dado el ID del cliente y el ID del crédito, se elimina el crédito. Solamente se pueden eliminar créditos pre aprobados o en su defecto, con estatus "en proceso".
 
 
 ***Endpoint:***
