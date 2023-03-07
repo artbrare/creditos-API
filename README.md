@@ -63,7 +63,7 @@ Nota: al abrir `http://localhost:PORT` en tu navegador se desplegará la documen
 
 | Atributo               | Requerido | Descripción |
 |------------------------|-----------|---------------------------------------------------------------------------------------------------------------------------------------|
-| id                     | Sí        | Identificador del cliente. Generado automáticamente.                                                                                             |
+| nombre                 | Sí        | Nombre del cliente. Máximo 50 caracteres.                                                                                             |
 | nombre                 | Sí        | Nombre del cliente. Máximo 50 caracteres.                                                                                             |
 | apellidos              | Sí        | Apellidos del cliente. Máximo 100 caracteres.                                                                                         |
 | email                  | Sí        | Correo electrónico del cliente. Único y validado mediante una expresión regular. Máximo 256 caracteres.                               |
@@ -84,8 +84,7 @@ Nota: al abrir `http://localhost:PORT` en tu navegador se desplegará la documen
 ### Esquema de créditos
 | Atributo        | Requerido | Descripción                                                                                                                                             |
 |-----------------|-----------|---------------------------------------------------------------------------------------------------------------------------------------------------------|
-
-| id              | Sí        | Identificador del crédito. Generado automáticamente.                                                                                             |
+| nombre                 | Sí        | Nombre del cliente. Máximo 50 caracteres.                                                                                             |
 | cliente         | Sí        | Identificador del cliente asociado con este crédito.                                                                                                 |
 | monto           | Sí        | Monto del crédito solicitado.                                                                                                                        |
 | tasaInteres     | Sí        | Tasa de interés anual aplicada al crédito, expresada como un número entre 0 y 1.                                                                     |
