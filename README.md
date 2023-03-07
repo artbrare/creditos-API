@@ -63,7 +63,7 @@ Nota: al abrir `http://localhost:PORT` en tu navegador se desplegará la documen
 
 | Atributo               | Requerido | Descripción |
 |------------------------|-----------|---------------------------------------------------------------------------------------------------------------------------------------|
-| nombre                 | Sí        | Identificador del cliente. Generado automáticamente.                                                                                            |
+| id                     | Sí        | Identificador del cliente. Generado automáticamente.                                                                                            |
 | nombre                 | Sí        | Nombre del cliente. Máximo 50 caracteres.                                                                                             |
 | apellidos              | Sí        | Apellidos del cliente. Máximo 100 caracteres.                                                                                         |
 | email                  | Sí        | Correo electrónico del cliente. Único y validado mediante una expresión regular. Máximo 256 caracteres.                               |
