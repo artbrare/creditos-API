@@ -77,7 +77,7 @@ Nota: al abrir `http://localhost:PORT` en tu navegador se desplegará la documen
 | direccion.estado       | No        | Estado de la dirección del cliente.                                                                                                   |
 | direccion.codigoPostal | No        | Código postal de la dirección del cliente.                                                                                            |
 | montoSolicitado        | Sí        | Monto de crédito solicitado por el cliente.                                                                                           |
-| ingresosMensuales      | Sí        | Ingresos mensuales del cliente. Si no tiene ingresos actualmente.                                                                     |
+| ingresosMensuales      | Sí        | Ingresos mensuales del cliente.                                                                     |
 | eliminado              | Sí        | Indica si el cliente ha sido eliminado del sistema. Valor por defecto: false.                                                         |
 | fechaCreacion          | Sí        | Fecha de creación del registro del cliente. Inmutable.                                                                                |
 ### Esquema de créditos
@@ -336,7 +336,7 @@ URL: {{DOMAIN}}/api/v1/cliente/640657f80d27cabc88f63440/credito/640659ed0d27cabc
 #### Eliminar un crédito
 
 
-Dado el ID del cliente y el ID del crédito, se elimina el crédito. Sólamente se pueden eliminar créditos pre aprobados o en su defecto, con estatus "en proceso"
+Dado el ID del cliente y el ID del crédito, se elimina el crédito. S0lamente se pueden eliminar créditos pre aprobados o en su defecto, con estatus "en proceso".
 
 
 ***Endpoint:***
