@@ -1,5 +1,5 @@
 
-# Creditos API
+# Créditos API
 
 La API Créditos es una aplicación RESTful construida con Node.js, Express y MongoDB para un sistema de créditos personales. Esta API permite la creación, actualización, obtención y eliminación de clientes y créditos. Se consideró lo siguiente:
 
@@ -29,7 +29,7 @@ La API Créditos es una aplicación RESTful construida con Node.js, Express y Mo
 --------
 ## Instalación
 ### Requisitos previos
-Para poder instalar Creditos API, necesitas tener instalado lo siguiente:
+Para poder instalar Créditos API, necesitas tener instalado lo siguiente:
 - Node.js
 - npm
 - MongoDB
@@ -396,4 +396,4 @@ Este método divide los resultados de la consulta en páginas y devuelve los res
 - Agregar funcionalidad de **reportes y estadísticas**: De esta manera, se pueden obtener insights valiosos sobre el comportamiento de los créditos y los clientes.
 
 ---
-[Regresar](#creditos-api)
+[Regresar](#créditos-api)
