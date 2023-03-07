@@ -6,6 +6,7 @@ const helmet = require('helmet');
 const xssClean = require('xss-clean');
 const hpp = require('hpp');
 const cors = require('cors');
+const bodyParser = require('body-parser')
 
 // Creacion de la instancia de la aplicación
 const app = express();
@@ -19,6 +20,11 @@ connectDatabase();
 
 // Middleware para analizar las peticiones HTTP en formato JSON
 app.use(express.json());
+
+// API documentacion en página princial
+app.use(bodyParser.urlencoded({ extended : true }));
+
+app.use(express.static('public'));
 
 // Configuración de los middlewares de seguridad
 app.use(helmet());
