@@ -85,7 +85,7 @@ Nota: al abrir `http://localhost:PORT` en tu navegador se desplegará la documen
 | Atributo        | Requerido | Descripción                                                                                                                                             |
 |-----------------|-----------|---------------------------------------------------------------------------------------------------------------------------------------------------------|
 
-| id                     | Sí        | Identificador del crédito. Generado automáticamente.                                                                                             |
+| id              | Sí        | Identificador del crédito. Generado automáticamente.                                                                                             |
 | cliente         | Sí        | Identificador del cliente asociado con este crédito.                                                                                                 |
 | monto           | Sí        | Monto del crédito solicitado.                                                                                                                        |
 | tasaInteres     | Sí        | Tasa de interés anual aplicada al crédito, expresada como un número entre 0 y 1.                                                                     |
