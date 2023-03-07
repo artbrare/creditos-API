@@ -1,9 +1,9 @@
 
 # Créditos API
 
-La API Créditos es una aplicación RESTful construida con Node.js, Express y MongoDB para un sistema de créditos personales. Esta API permite la creación, actualización, obtención y eliminación de clientes y créditos. Se consideró lo siguiente:
+La API Créditos es una aplicación RESTful construida con Node.js, Express y MongoDB para un sistema de créditos personales. Esta API permite la creación, actualización, obtención y eliminación de clientes y créditos. Se considera lo siguiente:
 
-* El alta de clientes se considera como un registro rápido. En su alta no se solicitan archivos multimedia como copia de su identificación oficial, curp, u otros documentos que podrían ser solicitados por una institución financiera.
+* El alta de clientes se considera como un registro rápido. En su alta no se solicitan archivos multimedia como copia de su identificación oficial, CURP, u otros documentos que podrían ser solicitados por una institución financiera.
 * Para los créditos se considera que el alta de un crédito simplemente se hace como una solicitud de crédito. Es decir, se deja como un ejercicio posterior la aprobación del crédito, así como pagos del crédito, tablas de amortización, etc.
 
 1. [Instalación](#instalación)
@@ -29,7 +29,7 @@ La API Créditos es una aplicación RESTful construida con Node.js, Express y Mo
 --------
 ## Instalación
 ### Requisitos previos
-Para poder instalar Créditos API, necesitas tener instalado lo siguiente:
+Para que puedas Créditos API, necesitas tener instalado lo siguiente:
 - Node.js
 - npm
 - MongoDB
@@ -83,12 +83,12 @@ Nota: al abrir `http://localhost:PORT` en tu navegador se desplegará la documen
 ### Esquema de créditos
 | Atributo        | Requerido | Descripción                                                                                                                                             |
 |-----------------|-----------|---------------------------------------------------------------------------------------------------------------------------------------------------------|
-| cliente         | Sí        | El identificador del cliente asociado con este crédito.                                                                                                 |
-| monto           | Sí        | El monto del crédito solicitado.                                                                                                                        |
-| tasaInteres     | Sí        | La tasa de interés anual aplicada al crédito, expresada como un número entre 0 y 1.                                                                     |
-| plazo           | Sí        | El plazo del crédito en meses.                                                                                                                          |
-| estatus         | No        | El estado actual del crédito. Puede ser "en proceso", "activo", "deuda pendiente", "liquidado", "cancelado" o "rechazado". Por defecto es "en proceso". |                                                                                            |
-| fechaAprobacion | No        | La fecha en que se aprobó el crédito y comenzó a ejecutarse.                                                                                            |
+| cliente         | Sí        | Identificador del cliente asociado con este crédito.                                                                                                 |
+| monto           | Sí        | Monto del crédito solicitado.                                                                                                                        |
+| tasaInteres     | Sí        | Tasa de interés anual aplicada al crédito, expresada como un número entre 0 y 1.                                                                     |
+| plazo           | Sí        | Plazo del crédito en meses.                                                                                                                          |
+| estatus         | No        | Estado actual del crédito. Puede ser "en proceso", "activo", "deuda pendiente", "liquidado", "cancelado" o "rechazado". Por defecto es "en proceso". |                                                                                            |
+| fechaAprobacion | No        | Fecha en que se aprobó el crédito y comenzó a ejecutarse.                                                                                            |
 | motivoRechazo   | No        | Si el crédito fue rechazado, esta es la razón proporcionada.                                                                                            |
 | eliminado       | Sí        | Indica si el crédito ha sido eliminado del sistema. Por defecto es false.                                                                                           |
 | fechaCreacion   | Sí        | Fecha de creación del registro del crédito. Inmutable.         
@@ -149,7 +149,7 @@ URL: {{DOMAIN}}/api/v1/cliente
 
 #### Actualizar un cliente
 
-Se actualiza la información de un cliente en la base de datos. Por medio de parámetros se puede filtrar, ordenar la busqueda. Además, se permite definir qué atributos recibir en la respuesta.
+Se actualiza la información de un cliente en la base de datos. Por medio de parámetros se puede filtrar y ordenar la busqueda. Además, se permite definir qué atributos recibir en la respuesta.
 
 ***Endpoint:***
 
@@ -272,7 +272,7 @@ URL: {{DOMAIN}}/api/v1/cliente/640657f80d27cabc88f63440/credito
 #### Actualizar un crédito
 
 
-Dado el ID del cliente y el ID del crédito, se actualiza la información de un crédito. Por medio de parámetros se puede filtrar, ordenar la busqueda. Además, se permite definir qué atributos recibir en la respuesta.
+Dado el ID del cliente y el ID del crédito, se actualiza la información de un crédito. Por medio de parámetros se puede filtrar y ordenar la busqueda. Además, se permite definir qué atributos recibir en la respuesta.
 
 ***Endpoint:***
 
@@ -351,7 +351,7 @@ URL: {{DOMAIN}}/api/v1/cliente/640659ed0d27cabc88f6345e/credito/640659d20d27cabc
 
 ### filter()
 
-Este método filtra los resultados de una consulta de MongoDB en base a una serie de parámetros recibidos en la URL. Primero hace una copia de la cadena de consulta, elimina los campos que no se necesitan y luego convierte los operadores de comparación en sintaxis de MongoDB. Finalmente, realiza la consulta utilizando los parámetros especificados y devuelve los resultados filtrados.
+Este método filtra los resultados de una consulta de MongoDB con base en una serie de parámetros recibidos en la URL. Primero hace una copia de la cadena de consulta, elimina los campos que no se necesitan y luego convierte los operadores de comparación en sintaxis de MongoDB. Finalmente, realiza la consulta utilizando los parámetros especificados y devuelve los resultados filtrados.
 
 Por ejemplo, la siguiente consulta regresa los clientes con género femenino y con ingresos mensuales mayores a $40,000.00.
 
@@ -393,7 +393,7 @@ Este método divide los resultados de la consulta en páginas y devuelve los res
 
 - Implementar un **sistema de notificaciones**: Para mantener a los clientes actualizados y brindar un mejor servicio, se puede considerar la implementación de un sistema de notificaciones. De esta manera, se puede enviar información relevante sobre los créditos, como fechas de pago, actualizaciones de estatus, entre otros.
 
-- Agregar funcionalidad de **reportes y estadísticas**: De esta manera, se pueden obtener insights valiosos sobre el comportamiento de los créditos y los clientes.
+- Agregar funcionalidad de **reportes y estadísticas**: De esta manera, se pueden obtener *insights* valiosos sobre el comportamiento de los créditos y los clientes.
 
 ---
 [Regresar](#créditos-api)
