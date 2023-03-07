@@ -12,7 +12,7 @@ const bodyParser = require('body-parser')
 const app = express();
 
 // Configuración de las variables de entorno
-dotenv.config({ path: './config/config.env' });
+dotenv.config({path: './src/config/config.env'});
 
 // Conexión a la base de datos
 const connectDatabase = require('./config/database');

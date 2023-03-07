@@ -4,8 +4,8 @@
   "description": "esta api es acerca de un sistema de créditos personales",
   "main": "app.js",
   "scripts": {
-    "start": "SET NODE_ENV=production & node app.js",
-    "dev": "nodemon app.js"
+    "start": "SET NODE_ENV=production & node src/app.js",
+    "dev": "nodemon src/app.js"
   },
   "author": "Arturo Bravo",
   "license": "ISC",
