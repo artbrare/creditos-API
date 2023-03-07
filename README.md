@@ -10,7 +10,7 @@ La API Créditos es una aplicación RESTful construida con Node.js, Express y Mo
 2. [Esquemas utilizados](#esquemas-utilizados)
     - [Esquema de clientes](#esquema-de-clientes)
     - [Esquema de créditos](#esquema-de-créditos)
-3. [Endpoints de la API](endpoints-de-la-api)
+3. [Endpoints de la API](#endpoints-de-la-api)
     - [Clientes](#clientes)
         - [Crear un cliente](#crear-un-cliente)
         - [Actualizar un cliente](#actualizar-un-cliente)
