@@ -1,5 +1,5 @@
 
-# Créditos API
+# Creditos API
 
 La API Créditos es una aplicación RESTful construida con Node.js, Express y MongoDB para un sistema de créditos personales. Esta API permite la creación, actualización, obtención y eliminación de clientes y créditos. Se consideró lo siguiente:
 
@@ -7,24 +7,24 @@ La API Créditos es una aplicación RESTful construida con Node.js, Express y Mo
 * Para los créditos se considera que el alta de un crédito simplemente se hace como una solicitud de crédito. Es decir, se deja como un ejercicio posterior la aprobación del crédito, así como pagos del crédito, tablas de amortización, etc.
 
 1. [Instalación](#instalación)
-1. [Esquemas utilizados](#esquemas-utilizados)
-    * [Clientes](#esquemaClientes)
-    * [Creditos](#esquemaCreditos)
-1. [Endpoints de la API](#serviciosAPI)
-    * [Clientes](#clientes)
-        1. [Crear un cliente](#1-crear-un-cliente)
-        1. [Actualizar un cliente](#2-actualizar-un-cliente)
-        1. [Obtener todos los clientes](#3-obtener-todos-los-clientes)
-        1. [Obtener un cliente](#4-obtener-un-cliente)
-        1. [Eliminar un cliente](#5-eliminar-un-cliente)
-    * [Créditos](#crditos)
-        1. [Crear un crédito](#1-crear-un-crdito)
-        1. [Actualizar un crédito](#2-actualizar-un-crdito)
-        1. [Obtener todos los créditos de un cliente](#3-obtener-todos-los-crditos-de-un-cliente)
-        1. [Obtener un crédito de un cliente](#4-obtener-un-crdito-de-un-cliente)
-        1. [Eliminar un crédito](#5-eliminar-un-crdito)
-1. [Filtros API](#filtros-api)
-1. [Trabajo posterior](#trabajoPosterior)
+2. [Esquemas utilizados](#esquemas-utilizados)
+    2.1 [Esquema de clientes](#esquema-de-clientes)
+    2.2 [Esquema de créditos](#esquema-de-créditos)
+3. [Endpoints de la API](#serviciosAPI)
+    3.1 [Clientes](#clientes)
+        3.1.1. [Crear un cliente](#crear-un-cliente)
+        3.1.2. [Actualizar un cliente](#actualizar-un-cliente)
+        3.1.3. [Obtener todos los clientes](#3btener-todos-los-clientes)
+        3.1.4. [Obtener un cliente](#obtener-un-cliente)
+        3.1.5. [Eliminar un cliente](#eliminar-un-cliente)
+    3.2 [Créditos](#créditos)
+        3.2.1. [Crear un crédito](#crear-un-crdito)
+        3.2.2. [Actualizar un crédito](#actualizar-un-crdito)
+        3.2.3. [Obtener todos los créditos de un cliente](#obtener-todos-los-crditos-de-un-cliente)
+        3.2.4. [Obtener un crédito de un cliente](#obtener-un-crdito-de-un-cliente)
+        3.2.5. [Eliminar un crédito](#eliminar-un-crdito)
+4. [Filtros API](#filtros-api)
+5. [Trabajo posterior](#trabajo-posterior)
 
 --------
 ## Instalación
@@ -59,7 +59,7 @@ Una vez que hayas completado estos pasos, podrás utilizar el proyecto en tu má
 Nota: al abrir `http://localhost:PORT` en tu navegador se desplegará la documentación de los endpoints de la API.
 
 ## Esquemas utilizados
-### Clientes
+### Esquema de clientes
 
 | Atributo               | Requerido | Descripción |
 |------------------------|-----------|---------------------------------------------------------------------------------------------------------------------------------------|
@@ -80,7 +80,7 @@ Nota: al abrir `http://localhost:PORT` en tu navegador se desplegará la documen
 | ingresosMensuales      | Sí        | Ingresos mensuales del cliente. Si no tiene ingresos actualmente.                                                                     |
 | eliminado              | Sí        | Indica si el cliente ha sido eliminado del sistema. Valor por defecto: false.                                                         |
 | fechaCreacion          | Sí        | Fecha de creación del registro del cliente. Inmutable.                                                                                |
-### Créditos
+### Esquema de créditos
 | Atributo        | Requerido | Descripción                                                                                                                                             |
 |-----------------|-----------|---------------------------------------------------------------------------------------------------------------------------------------------------------|
 | cliente         | Sí        | El identificador del cliente asociado con este crédito.                                                                                                 |
@@ -98,7 +98,7 @@ Nota: al abrir `http://localhost:PORT` en tu navegador se desplegará la documen
 
 Todas las solicitudes que tienen que ver con los clientes. Estas son: crear un cliente, actualizar un cliente, obtener una lista de clientes, obtener un cliente y eliminar un cliente.
 
-#### 1. Crear un cliente
+#### Crear un cliente
 
 Crea y agrega a la base de datos un cliente nuevo.
 
@@ -147,15 +147,9 @@ URL: {{DOMAIN}}/api/v1/cliente
 
 
 
-#### 2. Actualizar un cliente
+#### Actualizar un cliente
 
-
-Se actualiza la información de un cliente en la base de datos.
-
-Por medio de parámetros se puede filtrar, ordenar la busqueda. Además, se permite definir qué atributos recibir en la respuesta.
-
-Se cuenta con la funcionalidad de pagination.
-
+Se actualiza la información de un cliente en la base de datos. Por medio de parámetros se puede filtrar, ordenar la busqueda. Además, se permite definir qué atributos recibir en la respuesta.
 
 ***Endpoint:***
 
@@ -164,16 +158,10 @@ Method: PUT
 Type: RAW
 URL: {{DOMAIN}}/api/v1/cliente/6406585a0d27cabc88f63448
 ```
-
-
 ***Headers:***
-
 | Key | Value | Description |
 | --- | ------|-------------|
 | Content-Type | application/json |  |
-
-
-
 ***Body:***
 
 ```js        
@@ -184,7 +172,7 @@ URL: {{DOMAIN}}/api/v1/cliente/6406585a0d27cabc88f63448
 
 
 
-#### 3. Obtener todos los clientes
+#### Obtener todos los clientes
 
 
 Obtener todos los clientes de la base de datos.
@@ -208,7 +196,7 @@ URL: {{DOMAIN}}/api/v1/cliente/sort
 
 
 
-#### 4. Obtener un cliente
+#### Obtener un cliente
 
 
 Se obtiene la información de un cliente dado su ID.
@@ -224,7 +212,7 @@ URL: {{DOMAIN}}/api/v1/cliente/6406585a0d27cabc88f63448
 
 
 
-#### 5. Eliminar un cliente
+#### Eliminar un cliente
 
 
 Se elimina un cliente de la base de datos dado su ID.
@@ -246,7 +234,7 @@ Todas las solicitudes que tienen que ver con los créditos de un cliente. Estas 
 
 
 
-#### 1. Crear un crédito
+#### Crear un crédito
 
 
 Dado el ID del cliente, se crea un crédito en estatus "en proceso" el cual define un crédito pre aprobado. 
@@ -281,15 +269,10 @@ URL: {{DOMAIN}}/api/v1/cliente/640657f80d27cabc88f63440/credito
 
 
 
-#### 2. Actualizar un crédito
+#### Actualizar un crédito
 
 
-Dado el ID del cliente y el ID del crédito, se actualiza la información de un crédito.
-
-Por medio de parámetros se puede filtrar, ordenar la busqueda. Además, se permite definir qué atributos recibir en la respuesta.
-
-Se cuenta con la funcionalidad de pagination.
-
+Dado el ID del cliente y el ID del crédito, se actualiza la información de un crédito. Por medio de parámetros se puede filtrar, ordenar la busqueda. Además, se permite definir qué atributos recibir en la respuesta.
 
 ***Endpoint:***
 
@@ -318,7 +301,7 @@ URL: {{DOMAIN}}/api/v1/cliente/640657f80d27cabc88f63440/credito/640659e30d27cabc
 
 
 
-#### 3. Obtener todos los créditos de un cliente
+#### Obtener todos los créditos de un cliente
 
 
 Dado el ID del cliente, se obtienen todos sus créditos.
@@ -334,7 +317,7 @@ URL: {{DOMAIN}}/api/v1/cliente/640657f80d27cabc88f63440/credito/
 
 
 
-#### 4. Obtener un crédito de un cliente
+#### Obtener un crédito de un cliente
 
 
 Dado el ID del cliente y el ID del crédito, se obtiene la información del crédito.
@@ -350,7 +333,7 @@ URL: {{DOMAIN}}/api/v1/cliente/640657f80d27cabc88f63440/credito/640659ed0d27cabc
 
 
 
-#### 5. Eliminar un crédito
+#### Eliminar un crédito
 
 
 Dado el ID del cliente y el ID del crédito, se elimina el crédito. Sólamente se pueden eliminar créditos pre aprobados o en su defecto, con estatus "en proceso"
@@ -364,7 +347,53 @@ Type:
 URL: {{DOMAIN}}/api/v1/cliente/640659ed0d27cabc88f6345e/credito/640659d20d27cabc88f63458
 ```
 
+## Filtros API
 
+### filter()
+
+Este método filtra los resultados de una consulta de MongoDB en base a una serie de parámetros recibidos en la URL. Primero hace una copia de la cadena de consulta, elimina los campos que no se necesitan y luego convierte los operadores de comparación en sintaxis de MongoDB. Finalmente, realiza la consulta utilizando los parámetros especificados y devuelve los resultados filtrados.
+
+Por ejemplo, la siguiente consulta regresa los clientes con género femenino y con ingresos mensuales mayores a $40,000.00.
+
+```
+{{DOMAIN}}/api/v1/cliente/?ingresosMensuales[gt]=40000&genero=Femenino
+```
+
+### sort()
+Este método ordena los resultados de la consulta de acuerdo con los parámetros especificados en la URL. Si no se especifican campos de ordenamiento en la URL, ordena los resultados por fecha de creación en orden descendente.
+
+Por ejemplo, la siguiente consulta regresa los clientes ordenados por ingresos mensuales de forma ascendente 
+```
+{{DOMAIN}}/api/v1/cliente/?sort=ingresosMensuales
+```
+
+### limitFields()
+
+Este método limita los campos que se devuelven en los resultados de la consulta de acuerdo con los parámetros especificados en la URL. Si se especifican campos en la URL, se devuelven solo esos campos. De lo contrario, se devuelven todos los campos excepto el campo __v.
+
+Por ejemplo, la siguiente consulta regresa una lista de clientes con los campos de nombre, apellidos e ingresos mensuales exclusivamente.
+
+```
+{{DOMAIN}}/api/v1/cliente/?fields=nombre,apellidos,ingresosMensuales
+```
+
+### pagination() 
+
+Este método divide los resultados de la consulta en páginas y devuelve los resultados para una página específica de acuerdo con los parámetros especificados en la URL. Por defecto, se devuelve la primera página y se limita el número de resultados a 25 objetos por consulta. El número de página y el límite de resultados se especifican en la URL.
+
+## Trabajo posterior
+
+- Agregar **pruebas unitarias**: Es importante realizar pruebas unitarias exhaustivas para garantizar la calidad del código y detectar posibles errores. 
+
+- Agregar **autenticación de usuarios**: Para garantizar la seguridad del sistema y proteger la información de los clientes y sus créditos.
+
+- Considerar el agregar **archivos multimedia** como imágenes escaneadas de identificación oficial u otros documentos.
+
+- Para mejorar la gestión de los créditos y facilitar su seguimiento, se puede agregar funcionalidad de **pagos y tablas de amortización**. De esta manera, los clientes podrán realizar pagos de manera más eficiente y se podrá hacer un seguimiento más detallado del estado de los créditos.
+
+- Implementar un **sistema de notificaciones**: Para mantener a los clientes actualizados y brindar un mejor servicio, se puede considerar la implementación de un sistema de notificaciones. De esta manera, se puede enviar información relevante sobre los créditos, como fechas de pago, actualizaciones de estatus, entre otros.
+
+- Agregar funcionalidad de **reportes y estadísticas**: De esta manera, se pueden obtener insights valiosos sobre el comportamiento de los créditos y los clientes.
 
 ---
 [Regresar](#creditos-api)
