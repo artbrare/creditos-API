@@ -61,25 +61,25 @@ Nota: al abrir `http://localhost:PORT` en tu navegador se desplegará la documen
 ## Esquemas utilizados
 ### Clientes
 
-| Atributo               | Requerido | Descripción                                                                                                                           |   |   |
-|------------------------|-----------|---------------------------------------------------------------------------------------------------------------------------------------|---|---|
-| nombre                 | Sí        | Nombre del cliente. Máximo 50 caracteres.                                                                                             |   |   |
-| apellidos              | Sí        | Apellidos del cliente. Máximo 100 caracteres.                                                                                         |   |   |
-| email                  | Sí        | Correo electrónico del cliente. Único y validado mediante una expresión regular. Máximo 256 caracteres.                               |   |   |
-| fechaNacimiento        | Sí        | Fecha de nacimiento del cliente.                                                                                                      |   |   |
-| rfc                    | Sí        | Registro Federal de Contribuyentes del cliente. Único y validado mediante una expresión regular. Máximo 13 caracteres.                |   |   |
-| curp                   | Sí        | Clave Única de Registro de Población del cliente. Único y validado mediante una expresión regular. Máximo 18 caracteres.              |   |   |
-| genero                 | No        | Género del cliente. Valores permitidos: Masculino, Femenino, No binario, Prefiero no decir.                                           |   |   |
-| estadoCivil            | No        | Estado civil del cliente. Valores permitidos: Soltero/a, Casado/a, Divorciado/a, Viudo/a, Unión libre, Separado/a, Prefiero no decir. |   |   |
-| direccion.calle        | No        | Calle de la dirección del cliente.                                                                                                    |   |   |
-| direccion.colonia      | No        | Colonia de la dirección del cliente.                                                                                                  |   |   |
-| direccion.ciudad       | No        | Ciudad de la dirección del cliente.                                                                                                   |   |   |
-| direccion.estado       | No        | Estado de la dirección del cliente.                                                                                                   |   |   |
-| direccion.codigoPostal | No        | Código postal de la dirección del cliente.                                                                                            |   |   |
-| montoSolicitado        | Sí        | Monto de crédito solicitado por el cliente.                                                                                           |   |   |
-| ingresosMensuales      | Sí        | Ingresos mensuales del cliente. Si no tiene ingresos actualmente.                                                                     |   |   |
-| eliminado              | Sí        | Indica si el cliente ha sido eliminado del sistema. Valor por defecto: false.                                                         |   |   |
-| fechaCreacion          | Sí        | Fecha de creación del registro del cliente. Inmutable.                                                                                |   |   |
+| Atributo               | Requerido | Descripción |
+|------------------------|-----------|---------------------------------------------------------------------------------------------------------------------------------------|
+| nombre                 | Sí        | Nombre del cliente. Máximo 50 caracteres.                                                                                             |
+| apellidos              | Sí        | Apellidos del cliente. Máximo 100 caracteres.                                                                                         |
+| email                  | Sí        | Correo electrónico del cliente. Único y validado mediante una expresión regular. Máximo 256 caracteres.                               |
+| fechaNacimiento        | Sí        | Fecha de nacimiento del cliente.                                                                                                      |
+| rfc                    | Sí        | Registro Federal de Contribuyentes del cliente. Único y validado mediante una expresión regular. Máximo 13 caracteres.                |
+| curp                   | Sí        | Clave Única de Registro de Población del cliente. Único y validado mediante una expresión regular. Máximo 18 caracteres.              |
+| genero                 | No        | Género del cliente. Valores permitidos: Masculino, Femenino, No binario, Prefiero no decir.                                           |
+| estadoCivil            | No        | Estado civil del cliente. Valores permitidos: Soltero/a, Casado/a, Divorciado/a, Viudo/a, Unión libre, Separado/a, Prefiero no decir. |
+| direccion.calle        | No        | Calle de la dirección del cliente.                                                                                                    |
+| direccion.colonia      | No        | Colonia de la dirección del cliente.                                                                                                  |
+| direccion.ciudad       | No        | Ciudad de la dirección del cliente.                                                                                                   |
+| direccion.estado       | No        | Estado de la dirección del cliente.                                                                                                   |
+| direccion.codigoPostal | No        | Código postal de la dirección del cliente.                                                                                            |
+| montoSolicitado        | Sí        | Monto de crédito solicitado por el cliente.                                                                                           |
+| ingresosMensuales      | Sí        | Ingresos mensuales del cliente. Si no tiene ingresos actualmente.                                                                     |
+| eliminado              | Sí        | Indica si el cliente ha sido eliminado del sistema. Valor por defecto: false.                                                         |
+| fechaCreacion          | Sí        | Fecha de creación del registro del cliente. Inmutable.                                                                                |
 ### Créditos
 | Atributo        | Requerido | Descripción                                                                                                                                             |
 |-----------------|-----------|---------------------------------------------------------------------------------------------------------------------------------------------------------|
