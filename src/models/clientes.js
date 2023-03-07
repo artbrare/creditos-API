@@ -77,7 +77,7 @@ const clienteSchema = new mongoose.Schema({
     type: Date,
     required: true,
     default: Date.now,
-    immutable: true // Atributo inmutable
+    immutable: true
   },
 });
 

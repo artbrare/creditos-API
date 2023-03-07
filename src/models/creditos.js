@@ -32,7 +32,7 @@ const creditoSchema = new mongoose.Schema({
       type: Date,
       required: true,
       default: Date.now,
-      immutable: true // Atributo inmutable
+      immutable: true
     },
     fechaAprobacion: { type: Date }, // fecha donde empieza a correr el crédito
     motivoRechazo: { type: String },
